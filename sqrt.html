@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}SQRT{%endblock%}
+
+{%block body%}
+
+<h3>Sqrt</h3>
+<form action="/sqrtsend" method="post">
+    <input type="text" name="num" />
+    <input type="submit" value="Посчитать" id="sqrt_btn"/>
+</form>
+
+{{ sum }}
+
+{%endblock%}

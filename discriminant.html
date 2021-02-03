@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Discriminant{%endblock%}
+
+{%block body%}
+
+<h3>Нахождение дискриминанта</h3>
+<form action="/disresult" method="post">
+    <p> a = </p>
+    <input type="text" name="a"/>
+    <p>b = </p>
+    <input type="text" name="b"/>
+    <p>c = </p>
+    <input type="text" name="c"/>
+    <input type="submit" value="Посчитать" id="dis_btn"/>
+</form>
+<p>Дискриминант = </p>
+{{ sum }}
+{%endblock%}

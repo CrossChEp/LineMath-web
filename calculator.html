@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Calculator{%endblock%}
+
+{%block body%}
+
+<h3>Calculator</h3>
+<form action="/calculate" method="post">
+    <input type="text" name="num1" />
+    <input type="text" name="num2" />
+    <select name="operation">
+        <option value="plus">+</option>
+        <option value="minus">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+    </select>
+    <input type="submit"  value="Отправить" id="calc_btn"/>
+</form>
+
+    {{sum}}
+
+{%endblock%}

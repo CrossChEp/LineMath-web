@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}LineMaths{%endblock%}
+
+{%block body%}
+
+<h2>Температура</h2>
+
+<form action="/temp_send" method="post">
+    <input type="text" name="num"/>
+    <select name="convert">
+        <option value="Farengeit-to-Celci">Из Фаренгейта в Цельсий</option>
+        <option value="Celci-to-Farengeit">Из Цельсия в Фаренгейт</option>
+        <option value="Celvin-to-Celci">Из Кельвина в Цельсий</option>
+        <option value="Celci-to-Celvin">Из Цельсия в Кельвин</option>
+        <option value="Celvin-to-Farengeit">Кельвина в Фаренгейт</option>
+        <option value="Farengeit-to-Celvin">Из Фаренгейта в Кельвин</option>
+    </select>
+    <input type="submit" value="Конвертировать" id="temp_btn"/>
+</form>
+{{ sum }}
+{%endblock%}

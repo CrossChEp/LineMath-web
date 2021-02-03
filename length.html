@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Длина{%endblock%}
+
+{%block body%}
+
+<h2>Длина</h2>
+<form action="/length_send" method="post">
+    <input type="text" name="num"/>
+    <select name="convert">
+        <option value="From-Kilometers-to-meters">километры в метры</option>
+        <option value="Meters-to-decimeters">метр в дециметр</option>
+        <option value="Decimeters-to-centimeters">дециметр в сантиметр</option>
+        <option value="centimeters-to-millimeters">сантиметр в миллиметр</option>
+        <option value="Meters-to-kilometers">метры в километры</option>
+        <option value="Decimeters-to-meters">дециметры в метры</option>
+        <option value="Centimeters-to-decimeters">сантиметры в дециметры</option>
+        <option value="Millimeters-to-centimeters">миллиметры в сантиметры</option>
+        <option value="Kilometers-to-decimeters">километры в дециметры</option>
+        <option value="Kilometers-to-centimeters">километры в сантиметры</option>
+        <option value="Kilometers-to-millimeters">километры в миллиметры</option>
+        <option value="Meters-to-centimeters">метры в сантиметры</option>
+        <option value="Meters-to-millimeters">метры в миллиметры</option>
+    </select>
+    <input type="submit" value="Конвертировать" id="length_btn"/>
+</form>
+{{ sum }}
+
+{%endblock%}
